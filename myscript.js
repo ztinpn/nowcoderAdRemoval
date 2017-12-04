@@ -1,5 +1,8 @@
 (function(){
-    var blackList = ["牛客运营小妹", "牛妹","王阿清"];//屏蔽用户列表
+	if (!("blackList" in localStorage)) {
+		localStorage["blackList"] = "{}";
+	}
+	var blackSet = JSON.parse(localStorage["blackList"]);
     var elementsToHide = [
         ".mini-banner",//顶部广告
         "#jsSideTopicList",//热门推荐
@@ -11,7 +14,14 @@
     css.nodeType = "css/text";
     css.innerHTML = elementsToHide.join(",") + "{display: none !important;}";
     document.head.appendChild(css);
-    function findParent(x) {
+    document.body.ondblclick = function(x) {
+		var tar = findParent(x.srcElement);
+		var href = tar.querySelectorAll(".discuss-main a")[0].href;
+		blackSet[href] = 1;
+		localStorage["blackList"] = JSON.stringify(blackSet);
+		removeSelf(tar);
+	};
+	function findParent(x) {
         while (x != null) {
             if (x.nodeName == "LI" && x.classList.value.split(" ").includes("clearfix")) {
                 break;
@@ -27,13 +37,9 @@
             x.parentElement.removeChild(x);
         }
     }
-    var blackSet = {};
-    for (var i = 0; i < blackList.length; ++i) {
-        blackSet[blackList[i]] = 1;
-    }
-    Array.prototype.forEach.call(document.querySelectorAll(".d-name"),
+    Array.prototype.forEach.call(document.querySelectorAll(".discuss-main a"),
     function(x){
-        if (x.innerText in blackSet) {
+        if (x.href in blackSet) {
             removeSelf(findParent(x));
         }
     });
