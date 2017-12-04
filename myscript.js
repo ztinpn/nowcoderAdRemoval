@@ -1,8 +1,8 @@
 (function(){
-	if (!("blackList" in localStorage)) {
-		localStorage["blackList"] = "{}";
-	}
-	var blackSet = JSON.parse(localStorage["blackList"]);
+    if (!("blackList" in localStorage)) {
+        localStorage["blackList"] = "{}";
+    }
+    var blackSet = JSON.parse(localStorage["blackList"]);
     var elementsToHide = [
         ".mini-banner",//顶部广告
         "#jsSideTopicList",//热门推荐
@@ -15,13 +15,13 @@
     css.innerHTML = elementsToHide.join(",") + "{display: none !important;}";
     document.head.appendChild(css);
     document.body.ondblclick = function(x) {
-		var tar = findParent(x.srcElement);
-		var href = tar.querySelectorAll(".discuss-main a")[0].href;
-		blackSet[href] = 1;
-		localStorage["blackList"] = JSON.stringify(blackSet);
-		removeSelf(tar);
-	};
-	function findParent(x) {
+        var tar = findParent(x.srcElement);
+        var href = tar.querySelectorAll(".discuss-main a")[0].href;
+        blackSet[href] = 1;
+        localStorage["blackList"] = JSON.stringify(blackSet);
+        removeSelf(tar);
+    };
+    function findParent(x) {
         while (x != null) {
             if (x.nodeName == "LI" && x.classList.value.split(" ").includes("clearfix")) {
                 break;
