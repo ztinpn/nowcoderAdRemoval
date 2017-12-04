@@ -4,11 +4,8 @@
     }
     var blackSet = JSON.parse(localStorage["blackList"]);
     var elementsToHide = [
-        ".mini-banner",//顶部广告
         "#jsSideTopicList",//热门推荐
         ".phone-qrcode",//二维码
-        ".fixed-menu", //右侧菜单
-        ".nav-msg-num" //新消息提醒
         ];//隐藏的类元素
     var css = document.createElement("style");
     css.nodeType = "css/text";
