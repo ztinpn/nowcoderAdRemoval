@@ -12,6 +12,3 @@
 
 双击帖子所在行的空白处就可以永久隐藏它了。
 
-# 效果
-(左边是使用后，右边使用前)
-![](https://github.com/ztinpn/nowcoderAdRemoval/blob/master/cmp.jpg?raw=true)
