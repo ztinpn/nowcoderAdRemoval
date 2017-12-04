@@ -1,7 +1,11 @@
 (function(){
-	var blackList = ["牛客运营小妹", "牛妹","王阿清"];
-	var elementsToHide = [".mini-banner","#jsSideTopicList",".phone-qrcode",".fixed-menu",".nav-msg-num"];
-	//
+	var blackList = ["牛客运营小妹", "牛妹","王阿清"];//屏蔽列表
+	var elementsToHide = [".mini-banner",
+		"#jsSideTopicList",
+		".phone-qrcode",
+		".fixed-menu", 
+		".nav-msg-num" //新消息提醒
+		];//隐藏的类元素
 	var css = document.createElement("style");
 	css.nodeType = "css/text";
 	css.innerHTML = elementsToHide.join(",") + "{display: none !important;}";
