@@ -12,4 +12,4 @@
 
 # 效果
 (左边是使用后，右边使用前)
-![](https://github.com/ztinpn/nowcoderAdRemoval/blob/master/cmp.jpg )
+![](https://github.com/ztinpn/nowcoderAdRemoval/blob/master/cmp.jpg?raw=true)
