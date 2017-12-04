@@ -1,0 +1,17 @@
+{
+  "name": "广告移除",
+  "manifest_version": 2,
+  "version": "1.0",
+  "description": "广告移除",
+  "browser_action": {
+    "default_icon": "logo.png"
+   },
+"content_scripts": [
+    {
+	  "run": "document_start",
+      "matches": ["https://www.nowcoder.com/*"],
+      "js": ["myscript.js"]	  
+    }
+  ]
+}
+
