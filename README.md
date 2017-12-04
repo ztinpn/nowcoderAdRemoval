@@ -9,3 +9,7 @@
 下载zip并解压
 
 打开chrome浏览器菜单栏->更多工具->扩展程序->加载已解压的扩展程序->找到解压后的文件夹(要最深的那层才可以哦)->点确定
+
+# 效果
+(左边是使用后，右边使用前)
+![](https://github.com/ztinpn/nowcoderAdRemoval/blob/master/cmp.jpg )
