@@ -1,7 +1,7 @@
 (function(){
     var blackList = ["牛客运营小妹", "牛妹","王阿清"];//屏蔽用户列表
     var elementsToHide = [
-	    ".mini-banner",//顶部广告
+        ".mini-banner",//顶部广告
         "#jsSideTopicList",//热门推荐
         ".phone-qrcode",//二维码
         ".fixed-menu", //右侧菜单
