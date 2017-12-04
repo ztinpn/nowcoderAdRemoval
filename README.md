@@ -1,6 +1,10 @@
 # nowcoderAdRemoval
 
-#用法
+# 功能
+
+移除nowcoder上的推广，隐藏新消息提醒。
+
+# 用法
 
 下载zip并解压
 
